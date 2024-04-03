@@ -31,8 +31,6 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         const title = 'First Sketch'; // Replace with the desired title
         const editOptions3 = await performRightClickOptionByTitle(newPage, selector, title);
         console.log(editOptions3);
-
-
         // const desiredOption = 'Copy sketch'; //TYPE WHICH EDIT OPTION YOU WANT TO CHOSE
         copySketchFunction(editOptions3, newPage);
 
@@ -71,6 +69,7 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         const title1 = 'Second Sketch'; // Replace with the desired title
         const editOptions1 = await performRightClickOptionByTitle(newPage, selector1, title1);
         console.log(editOptions1);
+        //Paste into sketch function
         //TODO: THE CORE RUNS BECAUSE WE MADE IT RUN FOR 40 SECONDS. 
         await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
         console.log('Waited for 10 seconds.');
@@ -82,45 +81,21 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
-        // //TYPE WHICH EDIT OPTION YOU WANT TO CHOSE
-        // const desiredOption2 = 'Paste into sketch'; //TYPE WHICH EDIT OPTION YOU WANT TO CHOSE
-        // console.log('Desired rename option:', desiredOption2);
-        // await new Promise(resolve => setTimeout(resolve, 5000));
+        //WE START THE 10TH PHASE
+        console.log('Waited for 10 seconds.');
+        console.log('WE START THE 10TH PHASE');
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 5
 
-        // console.log('Searching for index of desired option...');
-        // await new Promise(resolve => setTimeout(resolve, 5000));
-        // let desiredOptionIndex2 = editOptions1.indexOf(desiredOption2);
-        // console.log('Index of desired  option:', desiredOptionIndex2);
-        // await new Promise(resolve => setTimeout(resolve, 5000));
-
-        // if (desiredOptionIndex2 !== -1) {
-        //     console.log('Desired rename option found.');
-        //     await new Promise(resolve => setTimeout(resolve, 5000));
-
-        //     console.log('Evaluating option element... ', desiredOption2);
-        //     const renameOptionElement = await newPage.evaluateHandle((index) => {
-        //         const menuItems = document.querySelectorAll('.context-menu-item-span');
-        //         return menuItems[index];
-        //     }, desiredOptionIndex2);
-        //     await new Promise(resolve => setTimeout(resolve, 5000));
-
-        //     if (renameOptionElement) {
-        //         console.log('Option element found.', desiredOption2);
-        //         await new Promise(resolve => setTimeout(resolve, 5000));
-        //         await renameOptionElement.click();
-        //         console.log(`Clicked on ${desiredOption2} option element.`);
-        //         await new Promise(resolve => setTimeout(resolve, 5000));
-        //     } else {
-        //         console.error(`${desiredOption2} option element not found.`);
-        //         await new Promise(resolve => setTimeout(resolve, 5000));
-        //     }
-        // } else {
-        //     console.error(`${desiredOption2} option not found.`);
-        //     await new Promise(resolve => setTimeout(resolve, 5000));
-        // }
-        // console.log('Waiting 10 seconds.');
-        // await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
-
+        //ALL THE CODE TOGETHER
+        const desiredIndex3 = 7; // Or any other desired index
+        await clickButtonByIndex(newPage, desiredIndex3);
+        //Right click option
+        const selector3 = 'div[data-id="yyHiDTMWflCzpmJN"]'; // Replace with the appropriate selector
+        const title3 = 'Sketch 1'; // Replace with the desired title
+        const editOptions4 = await performRightClickOptionByTitle(newPage, selector3, title3);
+        console.log(editOptions4);
+        // const desiredOption = 'Copy sketch'; //TYPE WHICH EDIT OPTION YOU WANT TO CHOSE
+        copySketchFunction(editOptions4, newPage);
 
 
 
