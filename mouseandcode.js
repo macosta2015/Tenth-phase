@@ -94,9 +94,6 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         const title3 = 'Sketch 1'; // Replace with the desired title
         const editOptions4 = await performRightClickOptionByTitle(newPage, selector3, title3);
         console.log(editOptions4);
-        // const desiredOption = 'Copy sketch'; //TYPE WHICH EDIT OPTION YOU WANT TO CHOSE
-        copySketchFunction(editOptions4, newPage);
-
 
 
 
