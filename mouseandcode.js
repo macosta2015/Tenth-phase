@@ -81,6 +81,13 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
 
 
 
+
+
+
+
+
+
+
         //WE START THE 10TH PHASE
         console.log('Waited for 10 seconds.');
         console.log('WE START THE 10TH PHASE');
@@ -94,6 +101,16 @@ const { performRightClickOptionByTitle } = require('./components/performRightCli
         const title3 = 'Sketch 1'; // Replace with the desired title
         const editOptions4 = await performRightClickOptionByTitle(newPage, selector3, title3);
         console.log(editOptions4);
+        //NEED TO ADD THE EDIT FUNCTION HERE, LIKE pasteIntoSketchFunction OR copySketchFunction
+
+
+
+
+
+
+
+
+
 
 
 
