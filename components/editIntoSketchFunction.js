@@ -1,6 +1,6 @@
-async function pasteIntoSketchFunction(editOptions1, newPage) {
+async function editIntoSketchFunction(editOptions1, newPage) {
     try {
-        const desiredOption2 = 'Paste into sketch'; // TYPE WHICH EDIT OPTION YOU WANT TO CHOSE
+        const desiredOption2 = 'Edit…'; // TYPE WHICH EDIT OPTION YOU WANT TO CHOSE
         console.log('Desired rename option:', desiredOption2);
         await new Promise(resolve => setTimeout(resolve, 5000));
         console.log('Waiting for 5 seconds...');
@@ -48,4 +48,4 @@ async function pasteIntoSketchFunction(editOptions1, newPage) {
     }
 }
 
-module.exports = pasteIntoSketchFunction;
+module.exports = editIntoSketchFunction;
