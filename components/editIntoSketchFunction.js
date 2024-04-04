@@ -21,15 +21,20 @@ async function editIntoSketchFunction(editOptions1, newPage) {
                 const menuItems = document.querySelectorAll('.context-menu-item-span');
                 return menuItems[index];
             }, desiredOptionIndex);
-            await new Promise(resolve => setTimeout(resolve, 5000));
+            await new Promise(resolve => setTimeout(resolve, 10000));
             console.log('Waiting for 5 seconds...');
 
             if (renameOptionElement) {
                 console.log('Option element found.', desiredOption2);
-                await new Promise(resolve => setTimeout(resolve, 5000));
+                await new Promise(resolve => setTimeout(resolve, 10000));
+                console.log('Waiting for 10 seconds...');
                 await renameOptionElement.click();
+                console.log('Waiting for 10 seconds...');
+                await new Promise(resolve => setTimeout(resolve, 10000));
                 console.log(`Clicked on ${desiredOption2} option element.`);
-                await new Promise(resolve => setTimeout(resolve, 5000));
+                await new Promise(resolve => setTimeout(resolve, 10000));
+                console.log('Waiting for 10 seconds...');
+                await new Promise(resolve => setTimeout(resolve, 10000));
             } else {
                 console.error(`${desiredOption2} option element not found.`);
                 await new Promise(resolve => setTimeout(resolve, 5000));
